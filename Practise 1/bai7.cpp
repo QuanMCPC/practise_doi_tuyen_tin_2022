@@ -16,9 +16,9 @@ int main()
     }
     else
     {
-    cout << "Phuong trinh " << a << "x2 + " << b << "x + " << c << " = 0 co:\n";
-    cout << " - x1 = " << (-b + sqrt(delta)) / (2 * a) << "\n";
-    cout << " - x2 = " << (-b - sqrt(delta)) / (2 * a) << "\n";
+        cout << "Phuong trinh " << a << "x2 + " << b << "x + " << c << " = 0 co:\n";
+        cout << " - x1 = " << (-b + sqrt(delta)) / (2 * a) << "\n";
+        cout << " - x2 = " << (-b - sqrt(delta)) / (2 * a) << "\n";
     }
     return 0;
 }
