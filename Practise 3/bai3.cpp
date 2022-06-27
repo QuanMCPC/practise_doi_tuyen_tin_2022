@@ -1,16 +1,31 @@
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    int tong = 0;
-    for (int i = 1; i <= 200; i++)
+    int so_dien;
+    long long tien_dien;
+    freopen("TIENDIEN.INP", "r", stdin);
+    freopen("TIENDIEN.OUT", "w", stdout);
+
+    cin >> so_dien;
+    if (so_dien < 50)
     {
-        if (i % 2 == 0)
-        {
-            tong += i;
-        }
+        tien_dien = so_dien * 100;
     }
-    cout << tong;
+    else if (so_dien >= 50 and so_dien < 1000)
+    {
+        tien_dien = so_dien * 500;
+    }
+    else if (so_dien >= 1000 and so_dien < 10000)
+    {
+        tien_dien = so_dien * 1000;
+    }
+    else
+    {
+        tien_dien = so_dien * 1200;
+    }
+    cout << tien_dien;
     return 0;
 }

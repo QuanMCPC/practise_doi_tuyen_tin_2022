@@ -4,17 +4,17 @@ using namespace std;
 
 int main()
 {
-    int m, n;
-    freopen("BT306.inp", "r", stdin);
-    freopen("BT306.out", "w", stdout);
-    cin >> m >> n;
-    if (m % n == 0)
-    {
-        cout << 1;
-    }
-    else
-    {
-        cout << 0;
-    }
+    int nam, nu, nhom_nho_nhat, cap_nam_nu, cap_dong_gioi;
+    freopen("PAIRING.INP", "r", stdin);
+    freopen("PAIRING.OUT", "w", stdout);
+    cin >> nam >> nu;
+
+    nhom_nho_nhat = min(nam, nu);
+
+    cap_nam_nu = nhom_nho_nhat;
+    // Support LGBT!
+    cap_dong_gioi = floor((nam + nu - nhom_nho_nhat - cap_nam_nu) / 2);
+
+    cout << cap_nam_nu << " " << cap_dong_gioi;
     return 0;
 }

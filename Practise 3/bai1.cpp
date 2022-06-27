@@ -1,19 +1,23 @@
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    int N;
-    cout << "Nhap so N: ";
-    cin >> N;
-    cout << "Uoc cua " << N << " la: ";
-    for (int i = 1; i <= N / 2; i++)
-    {
-        if (N % i == 0)
-        {
-            cout << i << " ";
-        }
-    }
-    cout << N;
+    int so_ngay_tuoi, so_nam, so_thang, so_ngay;
+    freopen("TUOI.INP", "r", stdin);
+    freopen("TUOI.OUT", "w", stdout);
+
+    cin >> so_ngay_tuoi;
+
+    so_nam = floor(so_ngay_tuoi / 365);
+    so_ngay_tuoi -= so_nam * 365;
+
+    so_thang = floor(so_ngay_tuoi / 30);
+    so_ngay_tuoi -= so_thang * 30;
+
+    so_ngay = so_ngay_tuoi;
+
+    cout << so_nam << " nam " << so_thang << " thang " << so_ngay << " ngay";
     return 0;
 }

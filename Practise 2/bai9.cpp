@@ -1,10 +1,14 @@
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
+
 int main()
 {
-    for (int i = 1; i <= 1000; i++)
-    {
-        cout << i << "\n";
-    }
+    int N;
+    freopen("SENBO.inp", "r", stdin);
+    freopen("SENBO.out", "w", stdout);
+
+    cin >> N;
+    cout << N << "\n" << floor(N / 2);
     return 0;
 }

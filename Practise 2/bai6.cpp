@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
+
 int main()
 {
-    int a, b;
-    cout << "Nhap so a va b de giai ax + b = 0: ";
-    cin >> a >> b;
-    if (a == 0)
+    int m, n;
+    freopen("BT306.inp", "r", stdin);
+    freopen("BT306.out", "w", stdout);
+    cin >> m >> n;
+    if (m % n == 0)
     {
-        if (b == 0)
-            cout << "Phuong trinh vo so nghiem";
-        else
-            cout << "Phuong trinh vo nghiem";
+        cout << 1;
     }
     else
     {
-        cout << "Phuong trinh " << a << "x + " << b << " = 0 co x la: " << 1.0 * -b / a;
+        cout << 0;
     }
     return 0;
 }
