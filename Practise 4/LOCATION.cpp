@@ -16,12 +16,12 @@ int main()
     }
     if (x == 0)
     {
-        cout << "Eixo X";
+        cout << "Eixo Y";
         return 0;
     }
     if (y == 0)
     {
-        cout << "Eixo Y";
+        cout << "Eixo X";
         return 0;
     }
     if (x > 0)

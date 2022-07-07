@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int N, K, X, Y;
+    long long N, K, X, Y;
     freopen("HOTEL.INP", "r", stdin);
     freopen("HOTEL.OUT", "w", stdout);
 

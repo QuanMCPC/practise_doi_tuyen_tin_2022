@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int N, K;
+    long long N, K;
     freopen("PAINT.INP", "r", stdin);
     freopen("PAINT.OUT", "w", stdout);
     cin >> N >> K;
