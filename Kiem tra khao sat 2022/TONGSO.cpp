@@ -3,7 +3,8 @@ using namespace std;
 
 int main()
 {
-    long long a, b, k, accum = 0;
+    long long k, count = 0, total = 0;
+    double a, b;
 
     freopen("TONGSO.INP", "r", stdin);
     freopen("TONGSO.OUT", "w", stdout);
@@ -13,12 +14,11 @@ int main()
 
     cin >> a >> b >> k;
 
-    for (long long i = a; i <= b; i++)
-    {
-        if (i % k == 0)
-            accum += i;
-    }
+    a = ceil(a / k) * k;
+    b = floor(b / k) * k;
+    count = (b - a) / k + 1;
+    total = count * (2 * a + (count - 1) * k) / 2;
 
-    cout << accum;
+    cout << total;
     return 0;
 }
