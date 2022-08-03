@@ -9,10 +9,12 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    long long x1, y1, r1, x2, y2, r2;
+    double x1, y1, r1, x2, y2, r2;
     cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
 
-    if (r1 + r2 >= sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2))) cout << "YES";
+    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    double two_radius = r1 + r2;
+    if (two_radius >= distance and max(r1, r2) - min(r1, r2) < distance) cout << "YES";
     else cout << "NO";
 
     return 0;
