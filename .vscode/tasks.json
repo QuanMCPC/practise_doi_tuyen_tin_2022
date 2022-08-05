@@ -9,19 +9,13 @@
                 "$tsc-watch"
             ],
             "group": "build",
-            "label": "tsc: watch - tsconfig.json",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "label": "tsc: watch - tsconfig.json"
         },
         {
             "label": "sass: watch - main.scss",
             "type": "shell",
             "command": "npx sass --watch website/style --style compressed --source-map",
-            "group": "build",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "group": "build"
         },
         {
             "label": "RUN THIS TASK AND ONLY THIS TASK TO BUILD THE REQUIRED FILES",
@@ -29,10 +23,7 @@
                 "tsc: watch - tsconfig.json",
                 "sass: watch - main.scss"
             ],
-            "group": "build",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "group": "build"
         },
         {
             "type": "cppbuild",
