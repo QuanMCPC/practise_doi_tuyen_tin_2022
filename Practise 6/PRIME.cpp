@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
 int main()
 {
     freopen("PRIME.INP", "r", stdin);
@@ -9,21 +8,20 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    ll L, R, count = 0;
+    int L, R, count = 0;
     cin >> L >> R;
 
-    vector<bool> prime(R, true);
+    vector<bool> prime(R - L + 1, true);
 
-    prime[1] = false;
-    for (ll p = 2; p * p <= R; p++)
+    for (int p = 2; p * p <= R; p++)
     {
-        if (!prime[p]) continue;
-        for (ll i = p * 2; i <= R; i += p)
-            prime[i] = false;
+        //if (!prime[p]) continue;
+        for (int i = max(p * p, ((L + p - 1) / p) * p); i <= R; i += p)
+            prime[i - L] = false;
     }
 
-    for (ll i = L; i <= R; i++)
-        if (prime[i]) count++;
+    for (int i = max(L, 2); i <= R; i++)
+        if (prime[i - L]) count++;
 
     cout << count;
     return 0;

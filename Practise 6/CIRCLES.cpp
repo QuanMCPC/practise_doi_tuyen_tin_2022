@@ -1,5 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
+
+ll power(ll x, ll y)
+{
+    ll total = 1;
+    for (ll i = 0; i < y; i++)
+        total *= x;
+    return total;
+}
 
 int main()
 {
@@ -12,7 +21,7 @@ int main()
     double x1, y1, r1, x2, y2, r2;
     cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
 
-    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    double distance = sqrt(power(x2 - x1, 2) + power(y2 - y1, 2));
     double two_radius = r1 + r2;
     if (two_radius >= distance and max(r1, r2) - min(r1, r2) < distance) cout << "YES";
     else cout << "NO";

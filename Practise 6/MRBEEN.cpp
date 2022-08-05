@@ -2,6 +2,14 @@
 using namespace std;
 #define ll long long
 
+ll power(ll x, ll y)
+{
+    ll total = 1;
+    for (ll i = 0; i < y; i++)
+        total *= x;
+    return total;
+}
+
 int main()
 {
     freopen("MRBEEN.INP", "r", stdin);
@@ -12,7 +20,7 @@ int main()
 
     ll C, K, money, extra;
     cin >> C >> K;
-    money = pow(10, K);
+    money = power(10, K);
     extra = C % money;
 
     if (extra >= money / 2) C += money - extra;
