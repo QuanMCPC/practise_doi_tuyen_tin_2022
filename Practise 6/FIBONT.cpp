@@ -16,26 +16,22 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    long long N, before = 1, current = 1, tempnum = 0;
+    long long N, cnt = 2;
+    long long fi[10000];
     cin >> N;
 
-    // vector<bool> prime(N, true);
+    fi[0] = 1;
+    fi[1] = 1;
+    fi[cnt] = fi[cnt - 1] + fi[cnt - 2];
+    cout << fi[cnt] << "\n";
 
-    // prime[1] = false;
-    // for (int p = 2; p * p <= N; p++)
-    // {
-    //     if (!prime[p]) continue;
-    //     for (int i = p * 2; i <= N; i += p)
-    //         prime[i] = false;
-    // }
-
-    while (current <= N)
+    while (fi[cnt] <= N)
     {
-        tempnum = current + before;
-        before = current;
-        current = tempnum;
-        if (isPrime(current))
-            cout << current << "\n";
+        cnt++;
+        fi[cnt] = fi[cnt - 1] + fi[cnt - 2];
+        if (fi[cnt] > N) break;
+        if (isPrime(fi[cnt]))
+            cout << fi[cnt] << "\n";
     }
 
     return 0;
