@@ -14,7 +14,7 @@ int main()
     for (int i = 0; i < T; i++)
     {
         cin >> N >> X;
-        cout << (10 - X) * (N - 1) << "\n";
+        cout << max(0, (N - 1) * (10 - X)) << "\n";
     }
 
     return 0;
