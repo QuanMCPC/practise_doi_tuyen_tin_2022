@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 int main()
 {
@@ -9,27 +10,17 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    int T, N, cnt = 0;
+    ll T, N, cnt = 0;
     cin >> T;
-    for (int i = 0; i < T; i++)
+    for (ll i = 0; i < T; i++)
     {
         cin >> N;
-        int day[N], count = 1;
-        day[0] = 0;
         cnt = 0;
-
-        for (int j = 1; j < N; j++)
+        for (ll a = 1; a < N; a++)
         {
-            day[j] = day[j - 1] + count;
-            count++;
+            cnt += max(N - 2 * a, (ll)0);
         }
-
-        for (int j = 2; j < N; j++)
-        {
-            if (day[j] - day[j - 2] <= N) cnt++;
-        }
-
-        cout << cnt * 2 << "\n";
+        cout << cnt << "\n";
     }
 
     return 0;
