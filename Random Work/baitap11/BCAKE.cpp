@@ -10,7 +10,8 @@ pair<int, int> cake[100001];
 
 void loop(int pos)
 {
-    buffer += PI * cake[pos].first * cake[pos].first * cake[pos].second;
+    double e = PI * cake[pos].first * cake[pos].first * cake[pos].second;
+    buffer += e;
     bool found = false;
     for (int i = pos + 1; i < n; i++)
     {
@@ -28,7 +29,7 @@ void loop(int pos)
         {
             total = buffer;
         }
-        buffer = 0;
+        buffer -= e;
     }
 }
 
