@@ -13,7 +13,7 @@ int search(ull arr[], ull n, ull K)
         if (K > arr[mid]) start = mid + 1;
         else if (K < arr[mid]) end = mid - 1;
     }
-    return end + 1;
+    return end;
 }
 
 int main()
@@ -38,7 +38,7 @@ int main()
     for (int i = 0; i < m; i++)
     {
         cin >> B;
-        cout << max(search(A, n + 1, B) - 1, 0) << ' ';
+        cout << max(search(A, n + 1, B), 0) << ' ';
     }
     return 0;
 }
