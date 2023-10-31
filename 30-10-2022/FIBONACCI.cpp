@@ -11,7 +11,7 @@ int main()
     cout.tie(0);
 
     int N;
-    ull a = 0, b = 1, buffer = 0;
+    ll a = 0, b = 1, buffer = 0;
     cin >> N;
 
     for (int i = 1; i <= N; i++)

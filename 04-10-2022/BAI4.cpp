@@ -12,7 +12,7 @@ int main()
 
     int d, N, num, cnt = 0;
     cin >> d >> N;
-    ull day[N + 1];
+    ll day[N + 1];
     day[0] = 0;
     for (int i = 1; i <= N; i++)
     {

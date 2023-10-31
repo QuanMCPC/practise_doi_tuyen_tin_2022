@@ -12,7 +12,7 @@ int main()
     cout.tie(0);
 
     int n, c;
-    ull smallest = ULLONG_MAX;
+    ll smallest = ULLONG_MAX;
     cin >> n;
     int b[n];
     for (int i = 0; i < n; i++) cin >> b[i];
@@ -21,7 +21,7 @@ int main()
         cin >> c;
         for (int j = 0; j < n; j++)
         {
-            ull v = abs(c + b[j]);
+            ll v = abs(c + b[j]);
             if (smallest > v) smallest = v;
         }
     }

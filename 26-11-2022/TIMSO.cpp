@@ -10,12 +10,12 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    ull N;
+    ll N;
     int K;
     cin >> N >> K;
 
     int prime[10] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
-    ull total_div = 1;
+    ll total_div = 1;
     for (int i = 0; i < K; i++) total_div *= prime[i];
 
     if (N < total_div)

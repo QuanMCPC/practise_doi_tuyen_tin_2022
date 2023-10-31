@@ -12,7 +12,7 @@ int main()
     cout.tie(0);
 
     int a, n;
-    ull S = 0;
+    ll S = 0;
 
     cin >> a >> n;
 
